@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "description": "This template should help get you started developing with Vue 3 and Typescript in Vite.",
   "main": ".eslintrc.js",
-  "directories": {
-    "test": "tests"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
+    "build-tsc": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
+    "format": "prettier --write ./src",
+    "lint": "eslint ./src --ext .vue,.js,.ts",
+    "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
     "prepare": "husky install",
     "commit": "git-cz"
   },
